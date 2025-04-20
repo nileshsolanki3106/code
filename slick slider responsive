@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Tabs & Accordion</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hide scroll bar if needed */
+        
+        .main-nav-wrapper {
+            overflow: hidden;
+        }
+        /* Optional spacing */
+        
+        .main-nav li {
+            margin-right: 10px;
+        }
+        
+        @media (min-width: 481px) {
+            .slick-initialized {
+                display: flex !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-4">
+    <nav class="main-nav-wrapper px-4">
+        <ul class="main-nav flex justify-start gap-4 overflow-x-auto whitespace-nowrap md:flex-wrap">
+            <li><a href="#" class="tab-item px-3 py-1 rounded bg-green-200">Solutions</a></li>
+            <li><a href="#">Expertise</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Training & Webinars</a></li>
+            <li><a href="#">What’s New</a></li>
+            <li><a href="#">Customer Stories</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            if (window.innerWidth <= 480) {
+                $('.main-nav').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    infinite: false,
+                    variableWidth: true
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
