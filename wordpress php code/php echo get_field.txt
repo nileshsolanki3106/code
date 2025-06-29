@@ -1,6 +1,6 @@
 <?php echo get_field ('us_heading'); ?>
 <?php echo get_sub_field ('us_heading'); ?>
-
+<?php echo esc_url( get_template_directory_uri() ); ?>/images/banner-img.png" alt="">
 --hero-image {
 <?php
    if ( has_post_thumbnail() ) {
